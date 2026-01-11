@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Panel Kết Bạn Free Fire Bot | @LilLownerQQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/jpeg" href="https://i.imgur.com/hOGqT5m.jpeg">
+<!-- Boxicons -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<!-- Be Vietnam Pro Italic -->
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+    --bg:#fff7ed;
+    --card:#fff;
+    --border:#fde68a;
+    --text:#7c2d12;
+    --muted:#b45309;
+
+    --red:#fb7185;
+    --green:#4ade80;
+    --shadow:0 20px 40px rgba(251,113,133,.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'Be Vietnam Pro',sans-serif;
+    font-style:italic;
+}
+
+body{
+    margin:0;
+    height:100vh;
+    background:
+        radial-gradient(circle at top,#fff7ed,#ffedd5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--text);
+}
+
+.panel{
+    width:100%;
+    max-width:420px;
+    background:linear-gradient(180deg,#fff,#fff7ed);
+    border-radius:22px;
+    padding:22px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
+
+.header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.header i{
+    font-size:32px;
+    color:var(--red);
+}
+
+.header h2{
+    margin:0;
+    font-size:19px;
+    font-weight:600;
+}
+
+.sub{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:2px;
+}
+
+.label{
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:6px;
+}
+
+.input{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:12px;
+    box-shadow:inset 0 0 0 1px rgba(251,113,133,.05);
+}
+
+.input i{
+    font-size:20px;
+    color:var(--red);
+}
+
+.input input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:14px;
+    color:var(--text);
+    background:transparent;
+}
+
+.actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:14px;
+}
+
+button{
+    border:none;
+    border-radius:16px;
+    padding:12px;
+    font-weight:600;
+    font-size:13px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    transition:.25s;
+}
+
+button i{
+    font-size:18px;
+}
+
+.add{
+    background:linear-gradient(135deg,#4ade80,#86efac);
+    color:#064e3b;
+}
+
+.remove{
+    background:linear-gradient(135deg,#fb7185,#fecdd3);
+    color:#7f1d1d;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    filter:brightness(1.05);
+}
+
+.log{
+    margin-top:16px;
+    background:#fff;
+    border:1px dashed var(--border);
+    border-radius:16px;
+    padding:12px;
+    font-size:12px;
+    height:140px;
+    overflow-y:auto;
+    white-space:pre-wrap;
+    color:#7c2d12;
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+    <div class="header">
+        <i class='bx bxs-user'></i>
+        <div>
+            <h2>Panel Kết Bạn Bot Free Fire</h2>
+            <div class="sub">Website Được Phát Triển Bởi @LilLowerQQ</div>
+        </div>
+    </div>
+
+    <div class="label">Nhập UID Người Chơi</div>
+    <div class="input">
+        <i class='bx bx-user-heart'></i>
+        <input id="friend_uid" placeholder="VD: 0123456789">
+    </div>
+
+    <div class="actions">
+        <button class="add" onclick="addFriend()">
+            <i class='bx bx-user-plus'></i>Kết bạn
+        </button>
+        <button class="remove" onclick="removeFriend()">
+            <i class='bx bx-user-x'></i>Xoá bạn
+        </button>
+    </div>
+
+    <div class="log" id="log">Bảng Ghi Log</div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
